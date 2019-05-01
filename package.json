@@ -1,0 +1,68 @@
+{
+  "name": "test-react-todomvc",
+  "version": "1.0.0",
+  "description": "React toDo MVC",
+  "main": "App/",
+  "babel": {
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "targets": {
+            "browsers": [
+              "> 1%",
+              "ie >= 11",
+              "not op_mini all"
+            ]
+          }
+        }
+      ],
+      "@babel/react"
+    ],
+    "plugins": [
+      "@babel/transform-runtime"
+    ]
+  },
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --mode=production",
+    "deploy": "npm run build && gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sakalx/test-react-todomvc"
+  },
+  "bugs": {
+    "url": "https://github.com/sakalx/test-react-todomvc/issues"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "todo",
+    "mvc"
+  ],
+  "author": "Sakal Serhii <sakals@mail.ua>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
